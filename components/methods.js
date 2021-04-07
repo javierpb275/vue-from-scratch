@@ -18,7 +18,7 @@ Vue.component('methods', {
     template: `
     <div>
         <h1>Executing methods with Vue.js</h1>
-        <p @click="hello">Press here to execute the hello() method</p>
+        <p @click="hello">Click here to execute the hello() method</p>
     </div>
     `
 });
