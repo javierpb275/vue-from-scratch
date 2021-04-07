@@ -22,6 +22,8 @@
     <script src="components/emit.js"></script>
     <!--parent-data component-->
     <script src="components/parent-data.js"></script>
+    <!--child-data component-->
+    <script src="components/child-data.js"></script>
 </head>
 <body>
     <div id="app">
@@ -32,10 +34,15 @@
         <vmodel-checkboxes></vmodel-checkboxes>
         <emit @showcarbrand="showCarBrandFromEmitCmp"></emit>
         <parent-data></parent-data>
+        <child-data ref="childData"></child-data>
     </div>
     <script>
         new Vue({
             el:'#app',
+            mounted() {
+                const cmpName = this.$refs.childData.cmpName;
+                console.log(cmpName);
+            },
             data() {
                 return {
                     appName: 'Starting with Vuejs 2'
