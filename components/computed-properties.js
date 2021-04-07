@@ -5,10 +5,16 @@ Vue.component('computed-properties', {
             surname: 'smith'
         }
     },
+    computed: {
+        fullName() {
+            return `${this.name} ${this.surname}`;
+        }
+
+    },
     template: `
     <div>
         <h1>Computed Properties</h1>
-        <p>{{name}} {{surname}}</p>
+        <p>{{fullName}}</p>
     </div>
     `
 });
