@@ -28,11 +28,16 @@
         <methods></methods>
         <vmodel></vmodel>
         <vmodel-checkboxes></vmodel-checkboxes>
-        <emit></emit>
+        <emit @showcarbrand="showCarBrandFromEmitCmp"></emit>
     </div>
     <script>
         new Vue({
             el:'#app',
+            methods: {
+                showCarBrandFromEmitCmp(carBrand) {
+                    alert(carBrand);
+                }
+            }
         })
     </script>
 </body>
