@@ -1,4 +1,4 @@
-Vue.component('computed-properties', {
+Vue.component('methods', {
     data() {
         return {
             name: 'john',
@@ -10,10 +10,15 @@ Vue.component('computed-properties', {
             return `${this.name} ${this.surname}`;
         }
     },
+    methods: {
+       hello () {
+           alert(this.fullName);
+       } 
+    },
     template: `
     <div>
-        <h1>Computed Properties</h1>
-        <p>{{fullName}}</p>
+        <h1>Executing methods with Vue.js</h1>
+        <p @click="hello">Press here to execute the hello() method</p>
     </div>
     `
 });
