@@ -10,9 +10,13 @@ Vue.component('watchers', {
     },
     methods: {
         async randomUser() {
-            const data = await fetch('https://randomuser.me/api/');
-            const json = await data.json();
-            console.log(json);
+            try {
+                const data = await fetch('https://randomuser.me/api/');
+                const json = await data.json();
+                console.log(json);
+            } catch(e) {
+                //something went wrong 
+            }
         }
     },
     template:`
