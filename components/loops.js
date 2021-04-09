@@ -15,10 +15,10 @@ Vue.component('loops', {
     <div>
         <h1>Loops with v-for</h1>
         <ul v-if="frameworks.length">
-            <li v-for="framework in frameworks" :key="framework.id">
-                {{ framework.name }}
+            <li v-for="(framework, index) in frameworks" :key="framework.id">
+                ({{index}}) | {{ framework.name }}
             </li>
         </ul>
     </div>
     `
-}) 
+});
