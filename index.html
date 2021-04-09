@@ -10,6 +10,8 @@
     <!--DIRECTIVES-->
     <!--focus directive-->
     <script src="directives/focus.js"></script>
+    <!--change-styles directive-->
+    <script src="directives/change-styles.js"></script>
     <!--COMPONENTS-->
     <!--message component-->
     <script src="components/message.js"></script>
@@ -55,7 +57,7 @@
 </head>
 <body>
     <div id="app">
-        <message></message>
+        <message v-change-styles="{backgroundColor: 'red', color: 'white'}"></message>
         <computed-properties></computed-properties>
         <methods></methods>
         <vmodel></vmodel>
