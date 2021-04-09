@@ -5,15 +5,14 @@ Vue.component('watchers', {
             oldUser: null
         }
     },
-    mounted() {
-        this.randomUser()
-    },
     methods: {
         async randomUser() {
             try {
                 const data = await fetch('https://randomuser.me/api/');
                 const json = await data.json();
-                console.log(json);
+                const user = json.results[0];
+                console.log(user);
+                this.user = `${user.email} ${user.gender}`;
             } catch(e) {
                 //something went wrong 
             }
@@ -21,7 +20,9 @@ Vue.component('watchers', {
     },
     template:`
     <div>
-        <h2>Watchers with Vuejs 2</h2>
+        <h1>Watchers with Vuejs 2</h1>
+        <button @click="randomUser">Get Random User</button>
+        <p>New user: {{user}}</p>
     </div>
     `
 });
