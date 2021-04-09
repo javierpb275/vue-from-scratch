@@ -1,0 +1,3 @@
+Vue.directive('focus', {
+    
+});
