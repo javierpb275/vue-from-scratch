@@ -97,7 +97,8 @@
                 console.log(cmpName);
                 setTimeout(() => {
                     this.$refs.childMethod.showCmpName();
-                }, 3000)
+                }, 3000);
+                console.log(this.$me('pepe', 30));
             },
             data() {
                 return {
