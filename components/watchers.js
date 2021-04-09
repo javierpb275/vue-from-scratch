@@ -18,11 +18,18 @@ Vue.component('watchers', {
             }
         }
     },
+    watch: {
+        user(newVal, oldVal) {
+            this.user = newVal;
+            this.oldUser = oldVal;
+        }
+    },
     template:`
     <div>
         <h1>Watchers with Vuejs 2</h1>
         <button @click="randomUser">Get Random User</button>
         <p>New user: {{user}}</p>
+        <p>Old user: {{oldUser}}</p>
     </div>
     `
 });
