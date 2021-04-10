@@ -10,7 +10,14 @@ Vue.component('props', {
         },
         age: {
             type: Number,
-            required: true
+            required: true,
+            validator: value => {
+                if (value < 18) {
+                    console.warn('You are under age...');
+                    return false;
+                }
+                return true;
+            }
         }
     },
     template:`

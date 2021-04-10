@@ -30,6 +30,6 @@ Vue.component('mixins', {
     <div>
         <h2>Using Mixins</h2>
         <p>{{mixinData}}</p>
-    <div>
+    </div>
     `
 }); 
